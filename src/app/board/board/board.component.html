@@ -1,9 +1,13 @@
 <div id="main">
   <div>
     <table id="speelveld">
-        <tr *ngFor="let row of rows">
-          <td class="inactive" *ngFor="let col of cols" >{{col}}</td>
+
+      <ng-container *ngFor="let row of rows">  <!-- eerste loop !-->
+        <tr>
+          <td class="inactive" *ngFor="let col of cols" >{{col}}</td> <!-- nested loop !-->
         </tr>
+      </ng-container>
+
     </table>
 
   </div>
