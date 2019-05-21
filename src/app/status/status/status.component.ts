@@ -19,10 +19,6 @@ export class StatusComponent implements OnInit {
 
   }
 
-  public updateTime()
-  {
-    this.gameService.seconden++;
-    this.timefield = this.gameService.seconden;
-  }
+
 
 }

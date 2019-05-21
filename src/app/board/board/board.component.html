@@ -1,8 +1,9 @@
 <div id="main">
   <div>
-    <p>board table</p>
     <table id="speelveld">
-
+        <tr *ngFor="let row of rows">
+          <td class="inactive" *ngFor="let col of cols" >{{col}}</td>
+        </tr>
     </table>
 
   </div>
