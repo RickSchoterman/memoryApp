@@ -17,25 +17,18 @@ export class BoardComponent implements OnInit {
 
   createBoard() {
 
-
     for (let i = 0; i < this.size; i++ ) {
 
-      this.cards.push([i]);
-
+      this.cards.push([]);
 
       for (let j = 0; j < this.size; j++ ) {
 
         console.log(i);
         this.cards[i].push([this.cellCount]);
-
+        this.cellCount++;
       }
-
-      this.cellCount++;
-
     }
-
     console.log(this.cards);
-
   }
 
 
