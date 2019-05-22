@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
-  size = 4;
-  rows = [];
-  cols = [];
+  cards = [];
+  size = 2;
+  cellCount = 0;
 
 
   constructor() {
@@ -16,18 +16,27 @@ export class BoardComponent implements OnInit {
   }
 
   createBoard() {
-    for (let i = 1; i <= this.size; i++ ) {
-      this.rows.push(i);
 
-      for (let j = 1; j <= this.size/this.size; j++ ) {
-        this.cols.push(j);
+
+    for (let i = 0; i < this.size; i++ ) {
+
+      this.cards.push([i]);
+
+
+      for (let j = 0; j < this.size; j++ ) {
+
+        console.log(i);
+        this.cards[i].push([this.cellCount]);
+
       }
+
+      this.cellCount++;
+
     }
 
-    console.log('aantal rows: ' + this.rows.length);
-    console.log('aantal kolommen: ' + this.cols.length);
-  }
+    console.log(this.cards);
 
+  }
 
 
   ngOnInit() {
